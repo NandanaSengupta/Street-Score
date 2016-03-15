@@ -152,10 +152,48 @@ scatter(latbos, lonbos)
 hold on
 scatter(lat_cl, lon_cl)
 hold on 
+scatter(latbos(imgind_cl75), lonbos(imgind_cl75), 'filled')
+hold on 
+scatter(lat_cl(75), lon_cl(75), '*')
+hold on 
+scatter(latbos(imgind_cl77), lonbos(imgind_cl77), 'filled')
+hold on 
+scatter(lat_cl(77), lon_cl(77), '*')
+hold on 
 scatter(latbos(imgind_cl82), lonbos(imgind_cl82), 'filled')
 hold on 
 scatter(lat_cl(82), lon_cl(82), '*')
-
+hold on 
+scatter(latbos(imgind_cl95), lonbos(imgind_cl95), 'filled')
+hold on 
+scatter(lat_cl(95), lon_cl(95), '*')
+hold on 
+scatter(latbos(imgind_cl19), lonbos(imgind_cl19), 'filled')
+hold on 
+scatter(lat_cl(19), lon_cl(19), '*')
+hold on 
+scatter(latbos(imgind_cl56), lonbos(imgind_cl56), 'filled')
+hold on 
+scatter(lat_cl(56), lon_cl(56), '*')
+hold on 
+scatter(latbos(imgind_cl78), lonbos(imgind_cl78), 'filled')
+hold on 
+scatter(lat_cl(78), lon_cl(78), '*')
+hold on 
+scatter(latbos(imgind_cl11), lonbos(imgind_cl11), 'filled')
+hold on 
+scatter(lat_cl(11), lon_cl(11), '*')
+hold on 
+scatter(latbos(imgind_cl59), lonbos(imgind_cl59), 'filled')
+hold on 
+scatter(lat_cl(59), lon_cl(59), '*')
+hold on 
+scatter(latbos(imgind_cl13), lonbos(imgind_cl13), 'filled')
+hold on 
+scatter(lat_cl(13), lon_cl(13), '*')
+title('Boston top 10 clusters by memebership')
+xlabel('Latitude')
+ylabel('Longitude')
 
 
 
@@ -185,6 +223,11 @@ C_clbos = C_cl ;
 
 
 C_cl(logical(eye(size(C_cl)))) = 0; 
+
+
+C_clust = C_cl; 
+
+save('C_clust.mat', 'C_clust')
 
 
 T_cl = zeros(size(C_cl));
